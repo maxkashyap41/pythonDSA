@@ -9,13 +9,13 @@ class SingleLinkedList:
     
     def traversal(self):
         if self.head == None:
-            print("List is Empty !")
+            print("\nList is Empty !")
             return
         else:
-            print("List is : ")
+            print("\nList is : ")
             p = self.head
             while p != None:
-                print(p.info, "->", end=" ")
+                print(p.info, end="->")
                 p = p.next
             print("\n")
     
@@ -25,6 +25,84 @@ class SingleLinkedList:
         while p != None:
             count = count+1
             p = p.next
-        print("The Number of Nodes are: ", count)
+        print("\nThe Number of Nodes are: {}". format(count))
     
-    def search
+    def search(self, x):
+        pos = 1
+        p = self.head
+        while p != None:
+            if x == pos:
+                print("\n{} is found at the position {}"+ format(x) + format(pos))
+                return True
+            pos = pos+1
+            p = p.next
+
+        print("\n{} not found in the list !". format(x))
+        return False
+
+    def insertion_at_begin(self, data):
+        new = Node(data)
+        new.next = self.head
+        self.head = new
+
+    def insertion_at_end(self, data):
+        new = Node(data)
+        p = self.head
+        if self.head == None:
+            print("\nList is Empyt !")
+            return
+        while p != None:
+            p = p.next
+        
+        p.next = new
+
+    def create_list(self):
+        new = Node(data)
+        num = int(input("\nEnter the Number of Nodes: "))
+        if num == 0:
+            return
+        print("\nEnter the value for the Nodes: ")
+        for i in range(num):
+            data = int(input())
+            self.head.next = new
+            #self.insertion_at_end(data)
+
+
+# Menu Driven Function
+
+if __name__ == "__main__":
+    list_ob = SingleLinkedList()
+    list_ob.create_list()
+
+    print("\n-------------------- Single Linked List --------------------\n")
+
+    while True:
+        print("\n1. Display List.")
+        print("2. Number of Nodes.")
+        print("3. Search for an Element.")
+        print("4. Insert at Beginning of the List.")
+        print("5. Insert at Ending of the List.")
+        print("6. Quit.")
+
+        option = int(input("\nEnter ur Choice: "))
+
+        if option == 1:
+            list_ob.traversal()
+        elif option == 2:
+            list_ob.count_nodes()
+        elif option == 3:
+            element = int(input("\nEnter the Number you wanna a find: "))
+            list_ob.search(element)
+        elif option == 4:
+            value1 = int(input("\nEnter the value to insert at Begin: "))
+            list_ob.insertion_at_begin(value1)
+        elif option == 5:
+            value2 = int(input("\nEnter the value to insert at End: "))
+            list_ob.insertion_at_end(value2)
+        elif option == 6:
+            break
+        else:
+            print("\nWrong Input no where else to found !")
+    
+    print("\n")
+        
