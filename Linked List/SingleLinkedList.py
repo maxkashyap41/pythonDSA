@@ -12,32 +12,32 @@ class SingleLinkedList:
             print("\nList is Empty !")
             return
         else:
-            print("\nList is : ")
+            print("\nList is :", end = " ")
             p = self.head
             while p != None:
-                print(p.info, end="->")
+                print(p.info, end = " ")
                 p = p.next
             print("\n")
-    
+
     def count_nodes(self):
         count = 0
         p = self.head
         while p != None:
             count = count+1
             p = p.next
-        print("\nThe Number of Nodes are: {}". format(count))
+        print("\nThe Number of Nodes are: ", count)
     
     def search(self, x):
         pos = 1
         p = self.head
         while p != None:
             if x == pos:
-                print("\n{} is found at the position {}"+ format(x) + format(pos))
+                print(x, "\n is found at the position ", pos)
                 return True
             pos = pos+1
             p = p.next
 
-        print("\n{} not found in the list !". format(x))
+        print("\n", x, " not found in the list !")
         return False
 
     def insertion_at_begin(self, data):
@@ -47,25 +47,23 @@ class SingleLinkedList:
 
     def insertion_at_end(self, data):
         new = Node(data)
-        p = self.head
         if self.head == None:
-            print("\nList is Empyt !")
+            self.head = new
             return
-        while p != None:
+
+        p = self.head
+        while p.next != None:
             p = p.next
-        
         p.next = new
 
     def create_list(self):
-        new = Node(data)
         num = int(input("\nEnter the Number of Nodes: "))
         if num == 0:
             return
         print("\nEnter the value for the Nodes: ")
-        for i in range(num):
+        for data in range(num):
             data = int(input())
-            self.head.next = new
-            #self.insertion_at_end(data)
+            self.insertion_at_end(data)
 
 
 # Menu Driven Function
@@ -77,7 +75,7 @@ if __name__ == "__main__":
     print("\n-------------------- Single Linked List --------------------\n")
 
     while True:
-        print("\n1. Display List.")
+        print("\n\n1. Display List.")
         print("2. Number of Nodes.")
         print("3. Search for an Element.")
         print("4. Insert at Beginning of the List.")
