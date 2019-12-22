@@ -64,6 +64,24 @@ class SingleLinkedList:
         for data in range(num):
             data = int(input())
             self.insertion_at_end(data)
+    
+    def insertion_in_between(self, x, data):
+        if self.head == None:
+            print("\nList Empty !")
+            return
+        
+        new = Node(data)
+        p = self.head
+        while p.next != None:
+            if p.info == x:
+                break
+            p = p.next
+        if x == None:
+            print(x, " not found !")
+            return
+        else:
+            new.next = p.next
+            p.next = new
 
 
 # Menu Driven Function
@@ -80,7 +98,8 @@ if __name__ == "__main__":
         print("3. Search for an Element.")
         print("4. Insert at Beginning of the List.")
         print("5. Insert at Ending of the List.")
-        print("6. Quit.")
+        print("6. Insert in between the Nodes.")
+        print("7. Quit.")
 
         option = int(input("\nEnter ur Choice: "))
 
@@ -95,9 +114,13 @@ if __name__ == "__main__":
             value1 = int(input("\nEnter the value to insert at Begin: "))
             list_ob.insertion_at_begin(value1)
         elif option == 5:
-            value2 = int(input("\nEnter the value to insert at End: "))
-            list_ob.insertion_at_end(value2)
+            value1 = int(input("\nEnter the value to insert at End: "))
+            list_ob.insertion_at_end(value1)
         elif option == 6:
+            x = int(input("\nEnter the Node behind which new value to be inserted: "))
+            data = int(input("\nEnter the new data to be inserted: "))
+            list_ob.insertion_in_between(x, data)
+        elif option == 7:
             break
         else:
             print("\nWrong Input no where else to found !")
