@@ -65,7 +65,7 @@ class SingleLinkedList:
             data = int(input())
             self.insertion_at_end(data)
     
-    def insertion_in_between(self, x, data):
+    def insertion_in_between_after_node(self, x, data):
         if self.head == None:
             print("\nList Empty !")
             return
@@ -82,6 +82,52 @@ class SingleLinkedList:
         else:
             new.next = p.next
             p.next = new
+    
+    def insertion_in_between_before_node(self, x, data):
+        if self.head == None:
+            print("\nList is Empty !")
+            return
+        
+        # if insertion of Node is to be at beginning of the List that is before the head.info
+        new = Node(data)
+        if self.head.info == x:
+            new.next = self.head
+            self.head = new
+            return
+
+        p = self.head
+        while p.next != None:
+            if p.next.info == x:
+                break
+            p = p.next
+        if x == None:
+            print(x, " not found !")
+        else:
+           new.next = p.next
+           p.next = new
+    
+    def insertion_in_between_at_position(self, pos, data):
+        if self.head == None:
+            print("\nList is Empty !")
+            return
+        
+        new = Node(data)
+        if pos == 1:
+            new.next = self.head
+            self.head = new
+            return
+
+        p = self.head
+        i = 1
+        while i < pos-1 and p != None:
+            p = p.next
+            i = i+1
+        if p == None:
+            print("You can insert upto position ", i, ".")
+        else:
+            new.next = p.next
+            p.next = new
+
 
 
 # Menu Driven Function
@@ -98,8 +144,10 @@ if __name__ == "__main__":
         print("3. Search for an Element.")
         print("4. Insert at Beginning of the List.")
         print("5. Insert at Ending of the List.")
-        print("6. Insert in between the Nodes.")
-        print("7. Quit.")
+        print("6. Insert in between *AFTER* Node.")
+        print("7. Insert in between *BEFORE* Node.")
+        print("8. Insert in between Given Position of Node.")
+        print("9. Quit.")
 
         option = int(input("\nEnter ur Choice: "))
 
@@ -119,8 +167,16 @@ if __name__ == "__main__":
         elif option == 6:
             x = int(input("\nEnter the Node behind which new value to be inserted: "))
             data = int(input("\nEnter the new data to be inserted: "))
-            list_ob.insertion_in_between(x, data)
+            list_ob.insertion_in_between_before_node(x, data)
         elif option == 7:
+            x = int(input("\nEnter the Node ahead which new value to be inserted: "))
+            data = int(input("\nEnter the new data to be inserted: "))
+            list_ob.insertion_in_between_before_node(x, data)
+        elif option == 8:
+            pos = int(input("\nEnter the position at which you wanna insert at: "))
+            data = int(input("\nEnter the new data to be inserted: "))
+            list_ob.insertion_in_between_at_position(pos, data)
+        elif option == 9:
             break
         else:
             print("\nWrong Input no where else to found !")
