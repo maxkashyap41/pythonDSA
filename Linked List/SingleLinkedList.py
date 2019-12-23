@@ -167,7 +167,7 @@ if __name__ == "__main__":
         elif option == 6:
             x = int(input("\nEnter the Node behind which new value to be inserted: "))
             data = int(input("\nEnter the new data to be inserted: "))
-            list_ob.insertion_in_between_before_node(x, data)
+            list_ob.insertion_in_between_after_node(x, data)
         elif option == 7:
             x = int(input("\nEnter the Node ahead which new value to be inserted: "))
             data = int(input("\nEnter the new data to be inserted: "))
