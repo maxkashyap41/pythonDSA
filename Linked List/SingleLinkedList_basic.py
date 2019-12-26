@@ -44,7 +44,7 @@ class SingleLinkedList:
         num = int(input("\nEnter the Number of Nodes: "))
         if num == 0:
             return
-        print("\nEnter the value for the Nodes: ")
+        print("\nEnter the values for the Nodes: ")
         for data in range(num):
             data = int(input())
             self.insertion_at_end(data)
@@ -53,6 +53,10 @@ class SingleLinkedList:
 
     def insertion_at_begin(self, data):
         new = Node(data)
+        if self.head == None:
+            print("\nList is Empty !")
+            return
+            
         new.next = self.head
         self.head = new
 
