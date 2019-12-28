@@ -32,6 +32,8 @@ class SLLSorting:
 
     def create_list(self):
         num = int(input("\nEnter the Number of Nodes: "))
+        if num == None:
+            return
         print("\nEnter the values for the Nodes: ")
         for data in range(num):
             data = int(input())
