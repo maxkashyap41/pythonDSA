@@ -68,7 +68,7 @@ class SLLMerging2:
         return objct
     
     def merge(self, p, q):
-        if p.info < q.info:
+        if p.info <= q.info:
             startM = p
             p = p.next
         else:
@@ -77,7 +77,7 @@ class SLLMerging2:
         
         ptr = startM
         while p != None and q != None:
-            if p.info < q.info:
+            if p.info <= q.info:
                 ptr.next = p
                 p = p.next
             else:
