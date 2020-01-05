@@ -61,6 +61,21 @@ class SLLReverse:
             r = p
             p = q
         self.head = r
+    
+    def reverse_list_recur(self, p, r):
+        if not p:
+            return r
+        
+        q = p.next
+        p.next = r
+        r = p
+        p = q
+        return self.reverse_list_recur(p, r)
+
+
+    
+    def reverse_list_arg(self):
+        self.head = self.reverse_list_recur(self.head, None)
 
 
 # Menu Driven Function
@@ -76,7 +91,8 @@ if __name__ == "__main__":
         print("2. Insert Node at Begin.")
         print("3. Insert Node at End.")
         print("4. Reverse the Linked List.")
-        print("5. Quit.")
+        print("5. Reverse the Linked List using Recursion.")
+        print("6. Quit.")
 
         option = int(input("\nEnter the preferred option: "))
 
@@ -94,6 +110,9 @@ if __name__ == "__main__":
             node_ob.reverse_list()
             print("\nList has been Reversed check the Updated List !")
         elif option == 5:
+            node_ob.reverse_list_arg()
+            print("\nList has been Reversed check the Updated List !")
+        elif option == 6:
             print("\nThank You for your time !")
             break
         else:
