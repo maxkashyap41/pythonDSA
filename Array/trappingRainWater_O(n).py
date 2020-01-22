@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     water = unitWater(arr, n)
 
-    print("\nUNit of Water Stored-> ", water)
+    print("\nUnit of Water Stored-> ", water)
     print("\n")
 
     
