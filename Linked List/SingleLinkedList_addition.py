@@ -73,7 +73,7 @@ class SLLAdition:
             sum = i+j+carry
             if sum >= 10:
                 carry = 1
-                rem = sum%10
+                rem = sum % 10
                 if p.next == None or q.next == None:
                     c = 0
                     c_node = Node(c)
