@@ -66,7 +66,7 @@ class SLLaddOne:
         sum = self.head.info+1
         if sum >= 10:
             carry = 1
-            rem = sum%10
+            rem = sum % 10
             add.append(rem)
         else:
             carry = 0
