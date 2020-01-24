@@ -5,11 +5,11 @@
 
 
 def reduced(string):
-    i = 0
+    i = 1
     while i < len(string):
         if string[i] == string[i-1]:
             string = string[0:i-1]+string[i+1:]
-            i = 0
+            i = 1
         i = i+1
     if not string:
         print("\nEmpty !")
