@@ -77,7 +77,7 @@ class SLLaddOne:
             sum = p.info+carry
             if sum >= 10:
                 carry = 1
-                rem = sum%10
+                rem = sum % 10
                 if p.next == None and p.info == 9:
                     c = 0
                     new = Node(c)
