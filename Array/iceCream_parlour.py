@@ -13,7 +13,6 @@ def iceCreamParlour(money, arr, n):
     i = 0
     add = 0
     found = -1
-    pos = []*2
     while i < n:
         for j in range(i+1, n):
             add = arr[i]+arr[j]
@@ -24,12 +23,17 @@ def iceCreamParlour(money, arr, n):
             break
         else:
             i = i+1
-    pos.append(i+1)
-    pos.append(j+1)
-    return pos
+            
+    return i+1, j+1
 
 
 if __name__ == "__main__":
+    money = int(input("\nEnter the Money you have: "))
+    n = int(input("Enter the size: "))
+    arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
+    pos1, pos2 = iceCreamParlour(money, arr, n)
+    print("Positions are: ", pos1, pos2)
+    print("\n")
     money = int(input("\nEnter the Money you have: "))
     n = int(input("Enter the size: "))
     arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
