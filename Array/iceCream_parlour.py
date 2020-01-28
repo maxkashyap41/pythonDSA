@@ -34,12 +34,4 @@ if __name__ == "__main__":
     pos1, pos2 = iceCreamParlour(money, arr, n)
     print("Positions are: ", pos1, pos2)
     print("\n")
-    money = int(input("\nEnter the Money you have: "))
-    n = int(input("Enter the size: "))
-    arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
-    positions = iceCreamParlour(money, arr, n)
-    print(positions)
-    print("Positions are: ", end = " ")
-    print(' '.join(map(str, positions)))
-    print("\n")
 
