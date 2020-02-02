@@ -1,16 +1,15 @@
-def missingNumbers(arr, n):
-    visited_a = [False for i in range(n)]
-    
-    for i in range(n):
-        if visited_a[i] == True:
-            continue
+# frequency of array using dictionary
 
-        countA = 1
-        for j in range(i+1, n):
-            if arr[i] == arr[j]:
-                visited_a[j] = True
-                countA = countA+1
-        print(arr[i], countA)
+def missingNumbers(arr, n):
+    freq = {}
+    for i in arr:
+        if i in freq:
+            freq[i] = freq[i]+1
+        else:
+            freq[i] = 1
+    
+    for key, value in freq.items():
+        print("%d : %d"% (key, value))
 
 
 if __name__ == "__main__":
