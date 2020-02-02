@@ -1,4 +1,4 @@
-def missingNumbers(arr, n):
+def Frequency_wo_dict(arr, n):
     visited_a = [False for i in range(n)]
     
     for i in range(n):
@@ -17,5 +17,5 @@ if __name__ == "__main__":
     arr = [3, 4, 5, 6, 7, 8, 3, 4, 5, 6]
     n = len(arr)
     print("\n")
-    missingNumbers(arr, n)
+    Frequency_wo_dict(arr, n)
     print("\n")
