@@ -1,3 +1,14 @@
+# input :       10
+#               203 204 205 206 207 208 203 204 205 206
+#               13
+#               203 204 204 205 206 207 205 208 203 206 205 206 204
+# ouput :       204 205 206
+# explanation : As an example, the array with some numbers missing, arr=[7,2,5,3,5,3].
+#               The original array of numbers brr=[7,2,5,4,6,3,5,3].
+#               The numbers missing are [4,6]
+
+
+
 def missingNumbers(arr, brr):
     m = len(arr)
     n = len(brr)
