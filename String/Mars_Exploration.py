@@ -1,3 +1,14 @@
+# input       : SOSSPSSQSSOR
+#               SOSSOT
+#               SOSSOSSOS
+# output      : 3
+#               1
+#               0
+# explanation : Expected signal: SOSSOSSOSSOS
+#               Recieved signal: SOSSPSSQSSOR
+#               Difference     :     X  X   X
+
+
 def mars_exploration(string):
     length = len(string)
     sos = "SOS"
