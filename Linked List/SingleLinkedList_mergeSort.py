@@ -76,11 +76,15 @@ class SLLmergeSort:
         return startM
     
 
-    def dividelist(self, p):
-        q = p.next.next
-        while q != None and q.next != None:
-            q = q.next
+    def dividelist(self, list_head):
+        if list_head == None:
+            return list_head
+
+        p = list_head
+        q = list_head
+        while q.next != None and q.next.next != None:
             p = p.next
+            q = q.next.next
         head2 = p.next
         p.next = None
         return head2
