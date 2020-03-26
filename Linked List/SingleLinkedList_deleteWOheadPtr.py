@@ -69,8 +69,6 @@ class SLLdeleteNode:
                 temp = temp.next
                 if temp.next != None:
                     k = k.next
-                else:
-                    continue
             k.next = None
                 
     
