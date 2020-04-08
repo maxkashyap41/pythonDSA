@@ -20,5 +20,5 @@ if __name__ == "__main__":
             print(subsetArr[i], end = " ")
 
         subsetArr.clear()
+        print("\n")
         t = t-1
-    print("\n")
