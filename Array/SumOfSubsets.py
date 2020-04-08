@@ -9,12 +9,16 @@ def subsetSum(arr, l, r, Sum=0):
 
 
 if __name__ == "__main__":
-    n = int(input("\nEnter the Size of the Array: "))
-    arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
+    t = int(input("\nEnter the Testcases you wanna try: "))
+    while t:
+        n = int(input("\nEnter the Size of the Array: "))
+        arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
 
-    subsetSum(arr, 0, n-1)
-    subsetArr.sort()
-    for i in range(len(subsetArr)):
-        print(subsetArr[i], end = " ")
+        subsetSum(arr, 0, n-1)
+        subsetArr.sort()
+        for i in range(len(subsetArr)):
+            print(subsetArr[i], end = " ")
 
+        subsetArr.clear()
+        t = t-1
     print("\n")
