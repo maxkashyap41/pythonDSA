@@ -36,14 +36,14 @@ def LeetCode(string, k):
 
 if __name__ == "__main__":
     print("\n")
-    # string = "1432219"
-    # k = 3
+    string = "1432219"
+    k = 3
     # string = "10200"
     # k = 1
     # string = "10"
     # k = 2
-    string = "10"
-    k = 1
+    # string = "10"
+    # k = 1
     # string = "100"
     # k = 1
 
