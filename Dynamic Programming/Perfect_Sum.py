@@ -19,6 +19,10 @@ def dpFunc(arr, Sum, ptr, memo):
 
 
 if __name__ == "__main__":
+    # arr = [2,3,5,6,8,10]
+    # Sum = 10
+    # arr = [1,2,3,4,5]
+    # Sum = 10
     size = int(input("\nEnter the Size of the Array: "))
     arr = list(map(int, input("Enter the Array Elements: ").split()))[:size]
     Sum = int(input("Enter the Sum you wanna check for the subsets: "))
