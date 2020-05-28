@@ -30,6 +30,7 @@ if __name__ == "__main__":
             if i not in main:
                 main.append(i)
 
+        print("\nResult:", end = ' ')
         for obs in main:
             found = True
             print(obs[0], obs[1], obs[2], obs[3], "$",end = "")
