@@ -2,7 +2,7 @@ def insertionSort(arr, n):
     for i in range(n):
         key = arr[i]
         j = i-1
-        while j >= 0 and key < arr[j]:
+        while j > -1 and key < arr[j]:
             temp = arr[j]
             arr[j] = arr[j+1]
             arr[j+1] = temp
