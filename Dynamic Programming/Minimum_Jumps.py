@@ -10,6 +10,7 @@ def MinimumJumps(arr, n):
                 jumps[i] = min(jumps[i], jumps[j]+1)
                 break
     
+    print("\n", jumps)
     if jumps[n-1] == float('inf'):
         return -1
     return jumps[n-1]
