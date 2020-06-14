@@ -12,7 +12,7 @@ def dpFunc(arr, Sum, ptr, memo):
     else:
         result = dpFunc(arr, Sum-arr[ptr], ptr-1, memo)+dpFunc(arr, Sum, ptr-1, memo)
 
-    print(memo)
+    # print(memo)
     memo[key] = result
     return result
 
