@@ -10,39 +10,38 @@
 #               non-matching alternating digits like e and f
 
 def TwoCharacters(string):
-    uniqueStringList = list(set(string))
-    length = len(uniqueStringList)
+    extracted_string = list(set(string))
+    exlen = len(extracted_string)
     resStringList = []
-    max_len = 0
-    for i in range(length):
-        for j in range(length):
-            comparedList = []
-            not_ = bool
+    maxlen = 0
+    for i in range(exlen):
+        for j in range(exlen):
+            compared_list = []
+            bool_ = False
             for x in string:
-                if x == uniqueStringList[i] or x == uniqueStringList[j]:
-                    comparedList.append(x)
+                if x == extracted_string[i] or x == extracted_string[j]:
+                    compared_list.append(x)
             
-            for v in range(len(comparedList)-1):
-                if comparedList[v] == comparedList[v+1]:
-                    not_ = False
+            complen = len(compared_list)
+            for v in range(complen-1):
+                if compared_list[v] == compared_list[v+1]:
+                    bool_ = True
                     break
-                else:
-                    not_ = True
             
-            if not_ == True:    # also can be written as if not_: which means it is true
+            if bool_ == False:    # also can be written as if not_: which means it is true
                 if len(string) == 1:
-                    max_len = 0
+                    maxlen = 0
                 else:
-                    max_len = max(max_len, len(comparedList))
+                    maxlen = max(maxlen, complen)
 
                     # storing the list of reduced string characters
-                    if len(comparedList) == max_len:
-                        resStringList = comparedList
+                    if complen == maxlen:
+                        resStringList = compared_list
     
     # converting list to string
     xString = ''.join(resStringList)
     
-    return max_len, xString
+    return maxlen, xString
 
 
 if __name__ == "__main__":
