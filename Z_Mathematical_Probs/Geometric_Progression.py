@@ -4,7 +4,7 @@
 
 # gp7 = a1 * r^(7-1)
 # 7 is the n term a1 is the 1st term no. whereas r is the common ratio between every numbers
-# 2 4 8 16 32 64 128 so here the common ration is r. (a1, a2, a3, ...., a(n)). 128 is the 7th tern gp.
+# 2 4 8 16 32 64 128 so here the common ration is r. (a1, a2, a3, ...., a(n)). 128 is the 7th term gp.
 
 import math
 
