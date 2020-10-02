@@ -1,12 +1,17 @@
 def bubble_sort(arr, n):
     count = 0
     for i in range(n-1):
+        swap = 0
         for j in range(n-i-1):
             if arr[j] > arr[j+1]:
                 temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
                 count = count+1
+                swap = 1
+        if swap == 0:
+            print("No swaps were done already in Sorted form !")
+            break
     
     return arr, count
 
