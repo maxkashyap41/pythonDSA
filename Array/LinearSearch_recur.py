@@ -1,5 +1,5 @@
 def linearSearch(arr, low, up, value):
-    if low < up:
+    if low > up:
         return -1
     if arr[low] == value:
         return low
