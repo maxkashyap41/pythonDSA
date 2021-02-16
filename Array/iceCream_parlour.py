@@ -13,7 +13,7 @@ def iceCreamParlour(money, arr, n):
     i = 0
     add = 0
     found = -1
-    pos = []*2
+    pos = []
     while i < n:
         for j in range(i+1, n):
             add = arr[i]+arr[j]
