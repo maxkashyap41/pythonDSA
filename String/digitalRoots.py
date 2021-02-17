@@ -15,28 +15,27 @@ def digitalRoots(string):
 
         if string[i] == ";":
             while add >= 10:
-                rem = 0
+                sum = 0
                 while add != 0:
-                    rem = rem+(add%10)
+                    sum = sum+(add%10)
                     add = add//10
-                if rem <= 9:
-                    digi.append(rem)
+                if sum <= 9:
+                    digi.append(sum)
                 else:
                     continue
             i = i+3
         add = add+int(string[i])
         i = i+1
-    
-    if add >= 10:
-        while add >= 10:
-            rem = 0
-            while add != 0:
-                rem = rem+(add%10)
-                add = add//10
-            if rem <= 9:
-                digi.append(rem)
-            else:
-                continue
+
+    while add >= 10:
+        sum = 0
+        while add != 0:
+            sum = sum+(add%10)
+            add = add//10
+        if sum <= 9:
+            digi.append(sum)
+        else:
+            continue
     
     print("Digital Roots are: ", digi)
 
