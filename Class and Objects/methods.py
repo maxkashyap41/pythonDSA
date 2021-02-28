@@ -32,9 +32,12 @@ class Student:
     
     # static methods
     @staticmethod
-    def CobraKai():
-        print("When will COBRA-KAI season 3 will release...... !!!")
+    def CobraKai_s04():
+        print("When will COBRA-KAI season 4 will release...... !!!")
     
+    @staticmethod
+    def CobraKai_s03():
+        print("COBRA-KAI season 3 was dawn awesome...... waiting for S04....!!!")
 
 if __name__ == "__main__":
     print("\n")
@@ -68,7 +71,8 @@ if __name__ == "__main__":
     print(s1.avg())
     print(s2.avg())
 
-    Student.CobraKai()
+    Student.CobraKai_s04()
+    Student.CobraKai_s03()
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n")
 
     print("\n")
