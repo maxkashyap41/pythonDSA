@@ -1,4 +1,5 @@
 # input       : 1, 4, 5, -7, -8, 2, 3
+#               -2, 1, -3, 4, -1, 2, 1, -5, 4
 #               
 # output      : 10
 # explanation : Print the maximum sum of the contiguous sub-array.
