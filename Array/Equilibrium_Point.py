@@ -1,16 +1,15 @@
 def equibPoint(arr, n):
-    right_sum = 0
+    Sum = 0
     for i in range(n):
-        right_sum = right_sum+arr[i]
-    
-    left_sum = 0
-    j = 0
-    for i in range(n):
-        right_sum = right_sum-arr[i]
-        left_sum = left_sum+arr[j]
-        if (left_sum-arr[i]) == right_sum:
+        Sum = Sum + arr[i]
+
+    curr_sum = 0
+    for j in range(n):
+        Sum = Sum - arr[i]
+        curr_sum = curr_sum + arr[i]
+        if (curr_sum-arr[i]) == Sum:
             return arr[i]
-        j = j+1
+
     return None
 
 
