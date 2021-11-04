@@ -1,18 +1,8 @@
 def countTriplets(arr, n):
     arr.sort()
-    arr_set = set(arr)
-    maxN = arr[-1]
-    Sum = 0
+
     count = 0
-    for i in range(n-1):
-        for j in range(i+1, n-1):
-            Sum = arr[i]+arr[j]
-            if Sum > maxN:
-                break
-            if Sum in arr_set:
-                count = count+1
     
-    return count
 
 
 
