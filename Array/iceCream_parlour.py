@@ -10,32 +10,21 @@
 
 
 def iceCreamParlour(money, arr, n):
-    i = 0
-    add = 0
-    found = -1
-    pos = []
-    while i < n:
-        for j in range(i+1, n):
-            add = arr[i]+arr[j]
-            if add == money:
-                found = True
-                break
-        if found == True:
-            break
+    hashmap = {}
+    for i in range(n):
+        key = money - arr[i]
+        if key in hashmap:
+            return hashmap[key]+1, i+1
         else:
-            i = i+1
-    pos.append(i+1)
-    pos.append(j+1)
-    return pos
+            hashmap[arr[i]] = i
 
 
 if __name__ == "__main__":
     money = int(input("\nEnter the Money you have: "))
     n = int(input("Enter the size: "))
     arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
-    positions = iceCreamParlour(money, arr, n)
-    print(positions)
-    print("Positions are: ", end = " ")
-    print(' '.join(map(str, positions)))
+    pos1, pos2 = iceCreamParlour(money, arr, n)
+    print(pos1, pos2)
+    
     print("\n")
 
