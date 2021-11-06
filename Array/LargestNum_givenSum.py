@@ -23,6 +23,33 @@ def LargestNum_givenSum(digit, Sum):
 
 
 
+def LargestNum(digit, Sum):
+    string = ''
+    i = 1
+    while i < digit:
+        if Sum > 9:
+            Sum = Sum - 9
+            string = string + '9'
+            i += 1
+        else:
+            string = string + str(Sum)
+            break
+    print(i)
+    print(Sum)
+    if i == digit and Sum < 10:
+        string = string + str(Sum)
+        return string
+    elif Sum < 10:
+        while digit - i != 0:
+            string = string + '0'
+            i += 1
+        return string
+    else:
+        return '-1'
+
+
+
+
 if __name__ == "__main__":
     # print("\n")
 
@@ -35,7 +62,8 @@ if __name__ == "__main__":
 
     digit, Sum = map(int, input("\nEnter the N Digit and Sum: ").split())
 
-    ans = LargestNum_givenSum(digit, Sum)
+    # ans = LargestNum_givenSum(digit, Sum)
+    ans = LargestNum(digit, Sum)
     print("The Resultant Number: ", ans)
 
     print("\n")
