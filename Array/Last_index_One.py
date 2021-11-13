@@ -12,14 +12,29 @@ def findOne(string):
 
     return -1
 
+
+def findOne_optimized(string):
+    n = len(string)
+    index = -1
+    for i in range(n):
+        if string[i] == '1':
+            index = i
+
+    if index != '-1':
+        return index
+    else:
+        return -1
+
 if __name__ == "__main__":
     print("\n")
 
-    # string = "00001"
-    # string = "0010111100"
-    string = "00000"
+    # string = '00001'
+    # string = '0010111100'
+    # string = '00000'
+    string = '1'
 
-    index = findOne(string)
+    # index = findOne(string)
+    index = findOne_optimized(string)
     print("The Last Index of One is :~ ", index)
 
     print("\n")
