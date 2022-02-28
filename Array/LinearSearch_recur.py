@@ -9,6 +9,19 @@ def linearSearch(arr, low, up, value):
     return linearSearch(arr, low+1, up-1, value)
 
 
+def linearSearch2(arr, i, j, value):
+    if i > j:
+        return -1
+    elif arr[i] == value:
+        return i
+    elif arr[j] == value:
+        return j
+    else:
+        return linearSearch2(arr, i+1, j-1, value)
+
+
+
+
 if __name__ == "__main__":
     # print("\n")
     # value = 4
@@ -20,7 +33,8 @@ if __name__ == "__main__":
     arr = list(map(int, input("Enter the Array Elements: ").split()))[:n]
     value = int(input("Enter the value that you wanna seacrh: "))
 
-    pos = linearSearch(arr, 0, n-1, value)
+    # pos = linearSearch(arr, 0, n-1, value)
+    pos = linearSearch2(arr, 0, n-1, value)
     if pos != -1:
         print("\nValue Found at position", (pos+1))
     else:

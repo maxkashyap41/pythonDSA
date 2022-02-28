@@ -5,10 +5,10 @@ def equibPoint(arr, n):
 
     curr_sum = 0
     for j in range(n):
-        Sum = Sum - arr[i]
-        curr_sum = curr_sum + arr[i]
-        if (curr_sum-arr[i]) == Sum:
-            return arr[i]
+        Sum = Sum - arr[j]
+        curr_sum = curr_sum + arr[j]
+        if (curr_sum-arr[j]) == Sum:
+            return arr[j]
 
     return None
 

@@ -1,3 +1,6 @@
+# GFG Problem name -> Element with left side smaller and right side greater
+
+
 def middleElement(arr, n):
     leftArr = [None]*n
     leftArr[0] = leftArr[n-1] = False
